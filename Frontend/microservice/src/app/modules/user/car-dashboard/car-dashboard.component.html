@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container" *ngIf="cars">
+  <div class="banner" [style.background-image]="'url(assets/cars/' + cars.carImg + ')'" >
+    <h2 class="car-title">{{ cars.name.toUpperCase() }}</h2>
+    <div class="buttons">
+       <button class="btn btn-secondary" (click)="bookCar(cars.id,userId)">Book</button>  
+    </div> 
+  </div>
+  <div class="car-info">
+    <div class="info-box"><strong>Mileage&nbsp;:&nbsp; </strong> {{cars.mileage}}Km/L</div>
+    <div class="info-box"><strong>Price&nbsp;:&nbsp;</strong>&#8377;{{cars.price}}</div>
+    <div class="info-box"><strong>Address&nbsp;:&nbsp;</strong> {{cars.address}}</div>
+    <div class="info-box"><strong>Capacity&nbsp;:&nbsp;</strong> {{cars.capacity}} Seater</div>
+    <div class="info-box"><strong>Type Of Car&nbsp;:&nbsp;</strong> {{cars.type}}</div>
+    <div class="info-box"><strong>Gear Shift&nbsp;:&nbsp;</strong> {{cars.gear}}</div>
+  </div>
+</div>
+<app-footer></app-footer>

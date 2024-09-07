@@ -1,0 +1,371 @@
+<testExecutions version="1">
+  <file path="PageNotFoundComponent">
+    <testCase name="PageNotFoundComponent should create" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+  </file>
+  <file path="AuthGuardService">
+    <testCase name="AuthGuardService should initiate login flow if access token is invalid and already on login page" duration="72"/>
+    <testCase name="AuthGuardService should redirect to login if access token is invalid and not already on login page" duration="3"/>
+    <testCase name="AuthGuardService should get access token from OAuth service" duration="2"/>
+    <testCase name="AuthGuardService should be created" duration="2"/>
+    <testCase name="AuthGuardService should return true if access token is valid" duration="2"/>
+  </file>
+  <file path="AdminDashboardComponent">
+    <testCase name="AdminDashboardComponent should fetch cars on ngOnInit" duration="38"/>
+    <testCase name="AdminDashboardComponent should handle error when fetching cars" duration="10"/>
+    <testCase name="AdminDashboardComponent should create" duration="5"/>
+  </file>
+  <file path="BookingService">
+    <testCase name="BookingService should save a booking" duration="5"/>
+    <testCase name="BookingService should handle errors appropriately" duration="2"/>
+    <testCase name="BookingService should delete a booking" duration="2"/>
+    <testCase name="BookingService should handle errors appropriately" duration="2"/>
+    <testCase name="BookingService should be created" duration="2"/>
+    <testCase name="BookingService should handle errors appropriately" duration="1"/>
+    <testCase name="BookingService should handle errors appropriately" duration="2"/>
+    <testCase name="BookingService should handle errors appropriately" duration="2"/>
+    <testCase name="BookingService should get bookings by user ID" duration="2"/>
+    <testCase name="BookingService should update a booking" duration="1"/>
+    <testCase name="BookingService should get all bookings" duration="2"/>
+  </file>
+  <file path="UserDashboardComponent">
+    <testCase name="UserDashboardComponent should create" duration="18"/>
+    <testCase name="UserDashboardComponent should fetch cars on initialization" duration="12"/>
+    <testCase name="UserDashboardComponent should navigate to /car and store carId in sessionStorage when viewCar is called" duration="7"/>
+  </file>
+  <file path="CarService">
+    <testCase name="CarService should be created" duration="3"/>
+    <testCase name="CarService should handle errors appropriately" duration="2"/>
+    <testCase name="CarService should handle errors appropriately" duration="2"/>
+    <testCase name="CarService should retrieve a single car by ID" duration="2"/>
+    <testCase name="CarService should handle errors appropriately" duration="2"/>
+    <testCase name="CarService should retrieve all cars" duration="2"/>
+    <testCase name="CarService should save a new car" duration="2"/>
+  </file>
+  <file path="SearchService">
+    <testCase name="SearchService should not emit data before sendSearchData is called" duration="2"/>
+  </file>
+  <file path="Booking">
+    <testCase name="Booking should create a new Booking instance" duration="1"/>
+  </file>
+  <file path="ViewBookingComponent">
+    <testCase name="ViewBookingComponent should update booking status correctly" duration="20"/>
+    <testCase name="ViewBookingComponent should handle error when fetching booking details fails" duration="6"/>
+    <testCase name="ViewBookingComponent should create" duration="5"/>
+    <testCase name="ViewBookingComponent should handle booking deletion and show appropriate messages on failure" duration="7">
+      <failure message="Error">Error: &lt;toHaveBeenCalledWith&gt; : Expected a spy, but got Function.
+Usage: expect(&lt;spyObj&gt;).toHaveBeenCalledWith(...arguments)
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/view-booking/view-booking.component.spec.ts:275:27)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:364:34)
+    at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:111:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+</failure>
+    </testCase>
+    <testCase name="ViewBookingComponent should handle booking deletion and show appropriate messages" duration="7">
+      <failure message="Error">Expected false to be true.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/view-booking/view-booking.component.spec.ts:230:39)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected spy fire to have been called with:
+  [ Object({ title: 'Cancelled!', text: 'Your Booking has been Cancelled.', icon: 'success', showCancelButton: false, confirmButtonText: 'OK' }) ]
+but actual calls were:
+  [ Object({ title: 'Are you sure?', text: 'You want to cancel Booking!', icon: 'warning', showCancelButton: true, confirmButtonText: 'Yes, Cancel it!', cancelButtonText: 'No!' }) ].
+
+Call 0:
+  Expected $[0] not to have properties
+      cancelButtonText: 'No!'
+Error: Expected spy fire to have been called with:
+  [ Object({ title: 'Cancelled!', text: 'Your Booking has been Cancelled.', icon: 'success', showCancelButton: false, confirmButtonText: 'OK' }) ]
+but actual calls were:
+  [ Object({ title: 'Are you sure?', text: 'You want to cancel Booking!', icon: 'warning', showCancelButton: true, confirmButtonText: 'Yes, Cancel it!', cancelButtonText: 'No!' }) ].
+Call 0:
+  Expected $[0] not to have properties
+      cancelButtonText: 'No!'
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/view-booking/view-booking.component.spec.ts:232:21)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+</failure>
+    </testCase>
+    <testCase name="ViewBookingComponent should fetch booking details on initialization" duration="7"/>
+    <testCase name="ViewBookingComponent should update session storage and navigate on updateHandler call" duration="5"/>
+  </file>
+  <file path="FooterComponent">
+    <testCase name="FooterComponent should create" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+  </file>
+  <file path="Car">
+    <testCase name="Car should create an instance" duration="1"/>
+  </file>
+  <file path="User">
+    <testCase name="User should create an instance" duration="1"/>
+  </file>
+  <file path="BookingComponent">
+    <testCase name="BookingComponent should update amount based on date changes" duration="24"/>
+    <testCase name="BookingComponent should submit booking form" duration="12">
+      <failure message="Error">Error: &lt;spyOn&gt; : saveBooking has already been spied upon
+Usage: spyOn(&lt;object&gt;, &lt;methodName&gt;)
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/booking/booking.component.spec.ts:229:28)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:364:34)
+    at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:111:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+</failure>
+    </testCase>
+    <testCase name="BookingComponent should handle form submission with invalid form" duration="7"/>
+    <testCase name="BookingComponent should validate required fields" duration="9"/>
+    <testCase name="BookingComponent should initialize component with session data and car details" duration="8"/>
+    <testCase name="BookingComponent should create" duration="6"/>
+    <testCase name="BookingComponent should handle onDifferentLocationChange" duration="9"/>
+    <testCase name="BookingComponent should set amount to 0 when dates are invalid" duration="10"/>
+  </file>
+  <file path="CarDashboardComponent">
+    <testCase name="CarDashboardComponent should fetch car details on initialization" duration="10"/>
+    <testCase name="CarDashboardComponent should navigate to booking when bookCar is called" duration="4"/>
+    <testCase name="CarDashboardComponent should create" duration="4"/>
+  </file>
+  <file path="HomepageComponent">
+    <testCase name="HomepageComponent should create" duration="7"/>
+  </file>
+  <file path="HeaderComponent">
+    <testCase name="HeaderComponent should create" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+  </file>
+  <file path="UpdateBookingComponent">
+    <testCase name="UpdateBookingComponent should navigate to view booking page on successful update" duration="38">
+      <failure message="Error">Expected '/' to be '/viewBooking'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:331:24)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+</failure>
+    </testCase>
+    <testCase name="UpdateBookingComponent should call onSubmit when form is submitted" duration="13">
+      <failure message="Error">Expected spy BookingService.updateBooking to have been called.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:288:42)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:364:34)
+</failure>
+    </testCase>
+    <testCase name="UpdateBookingComponent should create" duration="11"/>
+    <testCase name="UpdateBookingComponent should initialize with default values and then patch with data from session storage" duration="13">
+      <failure message="Error">Expected 0 to be 1.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:155:59)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected '' to be 'user123'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:156:56)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected 0 to be 1.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:157:55)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected 0 to be 100.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:158:56)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected null to equal Date(Thu Jul 25 2024 15:30:00 GMT+0530 (India Standard Time)).
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:159:60)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected null to equal Date(Sat Jul 27 2024 20:30:00 GMT+0530 (India Standard Time)).
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:160:61)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected '' to be 'Location A'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:161:64)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected '' to be 'Location B'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:162:65)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected null to equal Object({ hours: 10, minutes: 0 }).
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:163:60)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected null to equal Object({ hours: 15, minutes: 0 }).
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:164:61)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected undefined to equal Object({ id: 1, name: 'Car A', mileage: 10, address: 'Address A', price: 2000, capacity: 5, type: 'SUV', gear: 'Manual', carImg: 'car1.jpg' }).
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:167:27)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected 0 to be 2000.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/user/update-booking/update-booking.component.spec.ts:168:35)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+</failure>
+    </testCase>
+    <testCase name="UpdateBookingComponent should handle errors when fetching car details" duration="10"/>
+    <testCase name="UpdateBookingComponent should update amount based on date changes" duration="12"/>
+    <testCase name="UpdateBookingComponent should set amount to 0 when dates are invalid" duration="8"/>
+  </file>
+  <file path="SessionStorageService">
+    <testCase name="SessionStorageService removeItem should not remove item if not in browser" duration="2"/>
+    <testCase name="SessionStorageService removeItem should remove item from sessionStorage if in browser" duration="1"/>
+    <testCase name="SessionStorageService getItem should get item from sessionStorage if in browser" duration="1"/>
+    <testCase name="SessionStorageService getItem should return null if item is not in sessionStorage" duration="1"/>
+    <testCase name="SessionStorageService getItem should not get item if not in browser" duration="2"/>
+    <testCase name="SessionStorageService setItem should set item in sessionStorage if in browser" duration="1"/>
+    <testCase name="SessionStorageService setItem should not set item if not in browser" duration="2"/>
+    <testCase name="SessionStorageService should be created" duration="1"/>
+    <testCase name="SessionStorageService clearStorage should clear sessionStorage if in browser" duration="1"/>
+    <testCase name="SessionStorageService clearStorage should not clear sessionStorage if not in browser" duration="2"/>
+  </file>
+  <file path="AdminHeaderComponent">
+    <testCase name="AdminHeaderComponent should create" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+  </file>
+  <file path="SearchComponent">
+    <testCase name="SearchComponent should create" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+  </file>
+  <file path="AppComponent">
+    <testCase name="AppComponent should create the app" duration="3"/>
+  </file>
+  <file path="LoginComponent">
+    <testCase name="LoginComponent should redirect to /login if identity claims are not available" duration="4"/>
+    <testCase name="LoginComponent should redirect to /user if user does not have &quot;Admin&quot; role" duration="4"/>
+    <testCase name="LoginComponent should create" duration="2"/>
+    <testCase name="LoginComponent should call initCodeFlow if no valid access token exists" duration="1"/>
+    <testCase name="LoginComponent should redirect to /admin if user has &quot;Admin&quot; role" duration="2"/>
+  </file>
+  <file path="AllBookingsComponent">
+    <testCase name="AllBookingsComponent should create" duration="12"/>
+    <testCase name="AllBookingsComponent should fetch all bookings on initialization" duration="6"/>
+    <testCase name="AllBookingsComponent should update booking status correctly" duration="7"/>
+    <testCase name="AllBookingsComponent should handle error while fetching bookings" duration="4"/>
+  </file>
+  <file path="ProfileComponent">
+    <testCase name="ProfileComponent should create" duration="3"/>
+  </file>
+  <file path="AddCarComponent">
+    <testCase name="AddCarComponent should call carService.saveCar with correct data when saveCar is called" duration="15">
+      <failure message="Error">Expected $.id = null to equal 1.
+Expected $.name = null to equal 'Car A'.
+Expected $.mileage = null to equal 10.
+Expected $.price = null to equal 200.
+Expected $.address = null to equal 'Address A'.
+Expected $.capacity = null to equal 5.
+Expected $.type = null to equal 'SUV'.
+Expected $.gear = null to equal 'Manual'.
+Expected $.carImg = null to equal 'car1.jpg'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/admin/add-car/add-car.component.spec.ts:133:37)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:364:34)
+</failure>
+    </testCase>
+    <testCase name="AddCarComponent should create" duration="6"/>
+    <testCase name="AddCarComponent should return the full path if no slashes are present" duration="5"/>
+    <testCase name="AddCarComponent should return an empty string if the path is empty" duration="6"/>
+    <testCase name="AddCarComponent should call saveCar method when form is submitted" duration="6"/>
+    <testCase name="AddCarComponent should handle error when saveCar fails" duration="7">
+      <failure message="Error">Expected spy error to have been called with:
+  [ 'Error saving car: Error saving car' ]
+but actual calls were:
+  [ 'Error saving car:', HttpErrorResponse({ headers: HttpHeaders({ normalizedNames: Map(  ), lazyUpdate: null, headers: Map(  ) }), status: 0, statusText: 'Unknown Error', url: null, ok: false, name: 'HttpErrorResponse', message: 'Http failure response for (unknown url): undefined undefined', error: 'Error saving car' }) ].
+
+Call 0:
+  Expected $.length = 2 to equal 1.
+  Expected $[0] = 'Error saving car:' to equal 'Error saving car: Error saving car'.
+  Unexpected $[1] = HttpErrorResponse({ headers: HttpHeaders({ normalizedNames: Map(  ), lazyUpdate: null, headers: Map(  ) }), status: 0, statusText: 'Unknown Error', url: null, ok: false, name: 'HttpErrorResponse', message: 'Http failure response for (unknown url): undefined undefined', error: 'Error saving car' }) in array.
+Error: Expected spy error to have been called with:
+  [ 'Error saving car: Error saving car' ]
+but actual calls were:
+  [ 'Error saving car:', HttpErrorResponse({ headers: HttpHeaders({ normalizedNames: Map(  ), lazyUpdate: null, headers: Map(  ) }), status: 0, statusText: 'Unknown Error', url: null, ok: false, name: 'HttpErrorResponse', message: 'Http failure response for (unknown url): undefined undefined', error: 'Error saving car' }) ].
+Call 0:
+  Expected $.length = 2 to equal 1.
+  Expected $[0] = 'Error saving car:' to equal 'Error saving car: Error saving car'.
+  Unexpected $[1] = HttpErrorResponse({ headers: HttpHeaders({ normalizedNames: Map(  ), lazyUpdate: null, headers: Map(  ) }), status: 0, statusText: 'Unknown Error', url: null, ok: false, name: 'HttpErrorResponse', message: 'Http failure response for (unknown url): undefined undefined', error: 'Error saving car' }) in array.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/admin/add-car/add-car.component.spec.ts:175:27)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+
+Expected $.id = 1 to equal null.
+Expected $.name = 'Test Car' to equal ''.
+Expected $.mileage = 10 to equal 0.
+Expected $.price = 100 to equal 0.
+Expected $.address = 'Test Address' to equal ''.
+Expected $.capacity = 5 to equal 0.
+Expected $.type = 'Sedan' to equal ''.
+Expected $.gear = 'Automatic' to equal ''.
+Expected $.carImg = 'test.jpg' to equal null.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/modules/admin/add-car/add-car.component.spec.ts:177:37)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1698:26)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:365:28)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2070:39)
+</failure>
+    </testCase>
+    <testCase name="AddCarComponent should mark form as valid when all fields are filled" duration="7"/>
+    <testCase name="AddCarComponent should initialize carForm with required fields" duration="5"/>
+    <testCase name="AddCarComponent should correctly extract the file name from the full path" duration="6"/>
+    <testCase name="AddCarComponent should mark form as invalid when initialized with empty values" duration="6"/>
+    <testCase name="AddCarComponent should handle file selection and update form value" duration="8"/>
+  </file>
+  <file path="UserService">
+    <testCase name="UserService should send a GET request to login endpoint" duration="2"/>
+    <testCase name="UserService should be created" duration="1"/>
+  </file>
+</testExecutions>

@@ -1,0 +1,11 @@
+package com.example.microservice.authorizationserver;
+
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+@EnableCo
+public class AuthorizationConfigServer{
+	 
+
+}

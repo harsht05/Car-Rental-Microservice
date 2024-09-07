@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">
+      <img src="../../../../assets/icon.jpg" alt="LOGO" class="navbar-logo" style="height: 65px; width: auto">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+        <li class="nav-item">
+          <a class="nav-link active text-light btn nav-btn" aria-current="page" (click)="navigateTo('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light btn nav-btn" (click)="navigateTo('addCars')">Add Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light btn nav-btn" (click)="navigateTo('allBookings')">All Bookings</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link text-light btn nav-btn" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link text-light btn nav-btn" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

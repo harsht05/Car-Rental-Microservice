@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="booking-page">
+  <div class="booking-container">
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="booking-form">
+      <div class="form-row">
+        <div>
+          <label for="pickUpDate">Pick Up Date:</label>
+          <input id="pickUpDate" formControlName="pickUpDate" type="date">
+        </div>
+        <div>
+          <label for="dropOffDate">Drop Off Date:</label>
+          <input id="dropOffDate" formControlName="dropOffDate" type="date">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="pickUpLocation">Pick Up Location:</label>
+          <input id="pickUpLocation" formControlName="pickUpLocation">
+        </div>
+        <div>
+          <label for="dropOffLocation">Drop Off Location:</label>
+          <input id="dropOffLocation" formControlName="dropOffLocation">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="pickUpTime">Pick Up Time:</label>
+          <input id="pickUpTime" formControlName="pickUpTime" type="time">
+        </div>
+        <div>
+          <label for="dropOffTime">Drop Off Time:</label>
+          <input id="dropOffTime" formControlName="dropOffTime" type="time">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="amount">Amount:</label>
+          <input id="amount" formControlName="amount" type="number" readonly>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!bookingForm.valid">Update</button>
+      <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

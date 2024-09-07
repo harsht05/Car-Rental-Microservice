@@ -1,0 +1,36 @@
+<app-admin-header></app-admin-header>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped" style="margin-top: 10px; border-radius: 5%;">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Sr.No</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Name</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Mileage</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Address</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Price</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Capacity</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Type Of Car</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Gear Shift</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Image</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let car of cars; let i = index">
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ i + 1 }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{car.name }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{car.mileage}}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ car.address }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">&#8377;{{car.price}}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{car.capacity}} Seater</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{car.type}}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{car.gear}}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center"><img [src]="'assets/cars/' + car.carImg" alt="{{car.carImg}}"  style="height: 60px; width: 80px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

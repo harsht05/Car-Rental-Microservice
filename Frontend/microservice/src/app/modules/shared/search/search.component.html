@@ -1,0 +1,31 @@
+
+<app-header></app-header>
+
+<div *ngIf="filteredCars.length > 0; else noCars" class="container-fluid">
+  <div class="row car-list">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" *ngFor="let car of filteredCars">
+      <div class="card cards" style="width: 100%;" (click)="viewCar(car.id)">
+        <img [src]="'assets/cars/' + car.carImg" class="card-img-top" alt="{{car.name}}" style="height: 22rem; object-fit: fill;">
+
+        <div class="card-body">
+          <h5 class="card-title">{{car.name.toUpperCase()}}</h5>
+          <p class="card-text"> Mileage: {{car.mileage}}</p>
+          <p class="card-text"> Price: &#8377;{{car.price}}</p>
+          <p class="card-text"> Address: {{car.address}}</p>
+          <p class="card-text"> Capacity: {{car.capacity}} Seater</p>
+          <p class="card-text"> Type Of Car: {{car.type}}</p>
+          <p class="card-text"> Gear Shift: {{car.gear}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noCars>
+  <div class="no-cars-container">
+    <h3>No cars to display. Please enter a search term.</h3>
+    <img src="../../../../assets/undraw_order_a_car_3tww.png" alt="">
+  </div>
+</ng-template>
+
+<app-footer></app-footer>

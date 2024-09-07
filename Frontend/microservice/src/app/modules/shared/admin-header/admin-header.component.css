@@ -1,0 +1,24 @@
+.navbar {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-logo {
+    height: 65px;
+    width: auto;
+  }
+  
+  .nav-link {
+    margin-right: 1rem;
+  }
+  
+  .nav-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-btn:hover {
+    color: #ccc;
+  }
+  

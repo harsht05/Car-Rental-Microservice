@@ -1,0 +1,41 @@
+
+<app-admin-header></app-admin-header>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Sr.No</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Pick-Up Location</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Drop-Off Location</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Pick-Up Date</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Drop-Off Date</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px; text-align: center;">Pick-Up Time</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px; text-align: center;">Drop-Off Time</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Cancelled</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center">Status</th>
+                    <th style="background-color: #1367e6; color: white; border: 1px solid #949292; padding: 10px; height: 20px;text-align: center" id="...">Amount</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let booking of bookings; let i = index">
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ i + 1 }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ booking.pickUpLocation }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ booking.dropOffLocation }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ booking.pickUpDate | date: 'yyyy-MM-dd' }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ booking.dropOffDate |date: 'yyyy-MM-dd' }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">{{ booking.pickUpTime }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">{{ booking.dropOffTime }}</td>
+                    <td *ngIf="booking.isBlocked"  style="border: 1px solid #ccc; padding: 10px; text-align: center">Yes</td>
+                    <td *ngIf="!booking.isBlocked" style="border: 1px solid #ccc; padding: 10px; text-align: center">No</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">{{ booking.status }}</td>
+                    <td style="border: 1px solid #ccc; padding: 10px; text-align: center">&#8377;{{ booking.amount }}</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

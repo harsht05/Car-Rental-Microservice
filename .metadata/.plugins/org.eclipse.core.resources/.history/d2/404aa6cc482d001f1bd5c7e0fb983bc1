@@ -1,0 +1,7 @@
+package com.example.microservice.authorizationserver;
+
+import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
+
+public class AuthorizationConfigServer extends OAuth2AuthorizationServerConfiguration{
+
+}

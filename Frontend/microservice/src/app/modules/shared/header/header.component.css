@@ -1,0 +1,68 @@
+/* General navbar styling */
+.navbar-nav {
+    align-items: center; /* Center align items vertically */
+  }
+  
+  /* Navbar logo styling */
+  .navbar-logo {
+    height: 65px;
+    width: auto;
+  }
+  
+  /* Button styling for all nav items */
+  .nav-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+    margin-right: 10px; /* Add margin to create space between buttons */
+  }
+  
+  .nav-btn:hover {
+    background-color: #5c6ae6be;
+    color: #003b95;
+    border: 1px solid #ffffff;
+  }
+  
+  /* Adjust navbar brand image size */
+  .navbar-brand img {
+    max-height: 65px;
+  }
+  .search{
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+  }
+    
+.search .search-select{
+  height: 40px;
+  padding: 1%;
+  width: 112px;
+}
+
+.search .search-button {
+  height: 40px;
+  padding: 1%;
+  width: 100px;
+}
+.search-button:hover{
+background-color: #88b7fd49;
+color: #ffffff;
+}
+.search .search-input {
+  height: 40px;
+  padding: 1%;
+  width: 200px;
+}
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      justify-content: flex-end; /* Align items to the right on small screens */
+    }
+  }
+  

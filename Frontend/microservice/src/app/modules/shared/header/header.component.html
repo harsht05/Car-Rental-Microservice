@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #003b95;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">
+      <img src="../../../../assets/icon.jpg" alt="LOGO" class="navbar-logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+        <li class="nav-item">
+          <a class="nav-link active text-light btn nav-btn" aria-current="page" (click)="navigateTo('home')">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-light btn nav-btn" (click)="navigateTo('profile')">Profile</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link text-light btn nav-btn" (click)="navigateTo('viewBooking')">View Bookings</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link text-light btn nav-btn" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link text-light btn nav-btn" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+      <form [formGroup]="searchForm" class="d-flex search">
+        <select formControlName="selectedFilter" class="form-select form-select-sm search-select">
+          <option value="name">Name</option>
+          <option value="address">Address</option>
+          <option value="price">Max price</option>
+          <option value="capacity">Capacity</option>
+          <option value="type">Type</option>
+          <option value="gear">Gear</option>
+          <option value="mileage">Max mileage</option>
+        </select>
+        <input type="text" class="form-control form-control-sm search-input" placeholder="   Search..." formControlName="searchTerm" />
+        <button type="button" class="btn btn-sm btn-light search-button" [routerLink]="'/search'" (click)="onSearch()">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+

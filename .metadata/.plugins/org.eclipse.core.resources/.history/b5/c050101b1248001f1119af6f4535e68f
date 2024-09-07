@@ -1,0 +1,20 @@
+
+
+sonar.projectKey=Car_Rental_04 
+sonar.host.url=http://localhost:9000 
+sonar.login=88718eae1d2172e561d588f03d595756efae80f0
+
+sonar.language=java
+sonar.sources=src/main/java
+sonar.tests=src/test/java
+
+sonar.junit.reportPaths=target/surefire-reports
+sonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+sonar.java.binaries=target/classes
+
+
+sonar.exclusions=src/main/java/com/example/microservice/entity/BookingEntity.java, \
+   src/main/java/com/example/microservice/exception/ErrorResponse.java, \
+   src/main/java/com/example/microservice/exception/UserException.java, \
+   src/main/java/com/example/microservice/exception/GlobalExceptionHandler.java, \
+   src/main/java/com/example/microservice/service/BookingService.java

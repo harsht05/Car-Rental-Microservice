@@ -1,0 +1,13 @@
+sonar.projectKey=Car_Rental_02
+sonar.host.url=http://localhost:9000
+sonar.login=da68ee9deb6a8321859247e81f5d153ccc2e9067
+
+sonar.language=java
+sonar.sources=src/main/java
+sonar.tests=src/test/java
+
+sonar.junit.reportPaths=target/surefire-reports/*
+sonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+sonar.java.binaries=target/classes
+
+

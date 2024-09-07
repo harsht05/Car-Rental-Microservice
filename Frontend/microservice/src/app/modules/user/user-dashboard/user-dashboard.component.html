@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container-fluid p-3">
+    <p class="fw-bolder fs-2 text-center mt-4 mb-3 heading">Cars</p>
+    <div class="row justify-content-center mb-3 mt-3 cards-container">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" *ngFor="let car of cars">
+            <div class="card cards" style="width: 100%;" (click)="viewCar(car.id)">
+                <img [src]="'assets/cars/' + car.carImg" class="card-img-top" alt="{{car.name}}">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{car.name.toUpperCase()}}</h5>
+                    <p class="card-text"> Mileage: {{car.mileage}}</p>
+                    <p class="card-text"> Price: &#8377;{{car.price}}</p>
+                    <p class="card-text"> Address: {{car.address}}</p>
+                    <p class="card-text"> Capacity: {{car.capacity}} Seater</p>
+                    <p class="card-text"> Type Of Car: {{car.type}}</p>
+                    <p class="card-text"> Gear Shift: {{car.gear}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+ 
